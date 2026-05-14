@@ -74,7 +74,7 @@ A PR is ready to merge when:
 
 ## Branching and PRs
 
-- Branch from `main`. Name branches `<initials>/<short-description>` or
+- Branch from default branch. Name branches `<initials>/<short-description>` or
   `<issue-number>-<short-description>`.
 - One logical change per PR. If you find yourself writing "and also..." in
   the PR description, split it.
