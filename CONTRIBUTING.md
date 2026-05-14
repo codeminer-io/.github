@@ -24,7 +24,7 @@ Keep it short.
 3. **Triage** happens during the weekly board review. We agree `Out of scope`,
    add labels, and move ready issues to `Backlog`.
 4. **Pick up work** by moving an issue from `Backlog` to `In Progress` and
-   assigning yourself. One issue per person at a time is the norm.
+   assigning yourself or the relevant person. One issue per person at a time is the norm.
 5. **Open a PR** referencing the issue (`Closes #123`). Small, focused PRs.
 6. **Review** by the other team member. Move the card to `Review/QA`.
 7. **Merge and close** the issue. Card moves to `Done`.
