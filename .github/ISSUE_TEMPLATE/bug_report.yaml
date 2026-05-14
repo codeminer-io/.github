@@ -1,0 +1,51 @@
+---
+name: Bug report
+description: Something is broken or behaves unexpectedly
+labels: ["bug", "needs-triage"]
+body:
+  - type: textarea
+    id: what_happened
+    attributes:
+      label: What happened
+      description: What did you see? Include error messages, screenshots, or logs if relevant.
+      placeholder: >-
+        Clicking "Publish" on a draft codelist returns a 500 error.
+        Error message in console: "Cannot read property 'id' of undefined".
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+      description: What should have happened instead?
+      placeholder: The codelist should publish and appear in the public gallery.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: How to reproduce
+      description: Steps to make it happen again. A reprex (for R issues) or numbered steps (for UI issues) is ideal.
+      placeholder: >-
+        1. Log in as a user with no published codelists
+        2. Create a draft with a single DESCRIPTION() term
+        3. Click "Publish"
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Where did this happen? Production, local dev, which browser/R version, etc.
+      placeholder: >-
+        Production (codeminer-labs.com), Chrome 142 on macOS.
+        Or: local dev, R 4.4.2, codeminer.api 0.3.1.
+    validations:
+      required: false
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Anything else - related issues, workarounds, suspected cause.
+    validations:
+      required: false
