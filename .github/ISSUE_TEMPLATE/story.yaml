@@ -1,48 +1,55 @@
 ---
-name: Story/Task/Issue
-description: Create a new story or task
+name: New issue
+description: Propose a piece of work
+labels: ["needs-triage"]
 body:
   - type: textarea
-    id: definition_of_done
+    id: context
     attributes:
-      label: Definition of Done / Acceptance Criteria
-      description: What can someone see/do when this task is done.
+      label: Context
+      description: Who is this for and why does it matter? 2-4 sentences. Link any relevant conversation, paper, or user email.
       placeholder: >-
-        The export data is available in the xxx format, including age of the
-        patient at the time of imaging...
+        A researcher building a hypertension codelist wants to reuse Ben Zuckerman's
+        published version as a starting point. Currently they have to copy and paste
+        the CMQL manually. Came up in user feedback session 2026-04-15.
     validations:
       required: true
   - type: textarea
-    id: testing
+    id: acceptance_criteria
     attributes:
-      label: Testing
-      description: Specific testing considerations for this task to be done
-      placeholder: Passed integration testing that uses the correct modality...
+      label: Acceptance Criteria
+      description: What can someone see/do when this is done? Given/When/Then welcome but not required.
+      placeholder: >-
+        - A "Reuse" button is visible on every published codelist page
+        - Clicking it creates a draft copy in the user's workspace
+        - The draft includes a link back to the original and attribution to the author
     validations:
-      required: false
+      required: true
   - type: textarea
-    id: documentation
+    id: out_of_scope
     attributes:
-      label: Documentation
-      description: Documentation to be completed along with this task
-      placeholder: Update README and user guide...
+      label: Out of scope
+      description: What are we explicitly NOT doing in this issue? Leave blank if genuinely nothing.
+      placeholder: >-
+        Not building bulk reuse (multiple codelists at once).
+        Not tracking downstream forks for analytics.
     validations:
       required: false
   - type: textarea
     id: dependencies
     attributes:
       label: Dependencies
-      description: >-
-        Enter the github issue number(s) that the requirement is dependent on,
-        in the form `#1`
-      placeholder: "#1"
+      description: GitHub issue numbers this depends on, in the form `#1`.
+      placeholder: "#42, #57"
     validations:
       required: false
   - type: textarea
-    id: comments
+    id: notes
     attributes:
-      label: Comments
-      description: Any other considerations or comments
-      placeholder: More details or other comments...
+      label: Notes
+      description: Anything else - testing considerations, docs to update, screenshots, technical hints.
+      placeholder: >-
+        Will need to update user guide section 4.
+        Consider integration test against the published listing page.
     validations:
       required: false
