@@ -13,7 +13,7 @@ Keep it short.
 - Board flow: `Unrefined` → `Backlog` → `In Progress` → `Review/QA` → `Done`.
 - One PR per logical change. Reference the issue with `Closes #123`.
 - Weekly 30-min board review. Daily async standup in Slack.
-- Decisions go in issues or PRs, not Slack threads.
+- Decisions go in issues or PRs, not Slack threads or emails.
 
 ## How work flows
 
